@@ -1,149 +1,295 @@
 # CompSpoof V2 Dataset
 
+
+***
+
+
 ## 1. Introduction
 
 CompSpoof V2 is a composite spoofing dataset designed for **speech anti-spoofing** research under realistic and challenging acoustic conditions. Unlike conventional spoofing datasets that focus on isolated attack signals, CompSpoof V2 explicitly models the **coupling between speech generation attacks and environmental interference**, reflecting real-world replay, transmission, and deployment scenarios.
 
 Building upon CompSpoof V1, this version introduces a richer combination of attack sources, environmental sounds, and mixing strategies, with a clear separation between *seen* and *unseen* conditions to better evaluate generalization ability.
 
----
 
-## 2. Download
-
-The dataset is released in compressed archives, organized by data split.
-
-Typical download and extraction workflow:
-
-* Download the dataset archives from the official repository or hosting platform
-* Extract the contents while preserving the directory structure
-* Ensure sufficient disk space before extraction due to the large audio volume
-
-Detailed download links and checksums are provided on the dataset hosting page.
+ **🤗Download**: [CompSpoof Download Link](https://huggingface.co/datasets/XuepingZhang/CompSpoof)
+ **Baseline code**: [CompSpoof Download Link](https://huggingface.co/datasets/XuepingZhang/CompSpoof)
 
 ---
 
-## 3. Comparison with CompSpoof V1
+## 2. Audio Examples
+Below are audio samples from the **CompSpoof** dataset. For each class, we provide the **mixed/original audio**, along with the **speech** and **environment** sources. 
 
-Compared with CompSpoof V1, CompSpoof V2 provides the following improvements:
+--- 
 
-* **More diverse attack sources**: expanded speech generation and codec-based attacks
-* **Richer environmental modeling**: increased variety of background noises and acoustic scenes
-* **Composite spoofing design**: tighter coupling between spoofed speech and environment signals
-* **Clear seen/unseen partitioning**: explicit separation of attack and environment categories for robustness evaluation
-* **Refined metadata**: more detailed annotations to support fine-grained analysis
+### Class 0 — Original 
 
-These extensions make CompSpoof V2 more suitable for studying robustness and generalization in modern anti-spoofing systems.
+**Label:** original 
+
+**Description:** Original bona fide speech and corresponding environment audio without mixing
+
+<table>
+  <thead>
+    <tr>
+      <th>Original</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <audio controls>
+          <source src="audio_demo/class0/bonafide_0_028.mp3" type="audio/mpeg">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Class 1 — Bona fide + Bona fide 
+
+**Label:** bonafide_bonafide 
+
+**Description:** Bona fide speech mixed with another bona fide environmental audio
+
+<table>
+  <thead>
+    <tr>
+      <th>Mixed</th>
+      <th>Speech</th>
+      <th>Environment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <audio controls>
+          <source src="audio_demo/class1/bonafide_bonafide_0471.wav" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class1/D_0002500345.flac" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class1/-OQ3KFwzLCI_474.mp3" type="audio/mpeg">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Class 2 — Spoofed Speech + Bona fide Environment 
+
+**Label:** spoof_bonafide 
+
+**Description:** Spoof speech mixed with bona fide environmental audio
+<table>
+  <thead>
+    <tr>
+      <th>Mixed</th>
+      <th>Speech</th>
+      <th>Environment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <audio controls>
+          <source src="audio_demo/class2/spoof_bonafide_0099.wav" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class2/T_0000011037.flac" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class2/-LGTb-xyjzA_11.mp3" type="audio/mpeg">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Class 3 — Bona fide Speech + Spoofed Environment 
+
+**Label:** bonafide_spoof 
+
+**Description:** Bona fide speech mixed with spoof environmental audio
+
+<table>
+  <thead>
+    <tr>
+      <th>Mixed</th>
+      <th>Speech</th>
+      <th>Environment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <audio controls>
+          <source src="audio_demo/class3/bonafide_spoof_0248.wav" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class3/D_0001820722.flac" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class3/ViP3M-Hlm18_000030.wav" type="audio/mpeg">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Class 4 — Spoofed Speech + Spoofed Environment 
+
+**Label:** spoof_spoof 
+
+**Description:** Spoof speech mixed with spoof environmental audio
+
+<table>
+  <thead>
+    <tr>
+      <th>Mixed</th>
+      <th>Speech</th>
+      <th>Environment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <audio controls>
+          <source src="audio_demo/class4/spoof_spoof_0439.wav" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class4/T_0000141802.flac" type="audio/mpeg">
+        </audio>
+      </td>
+      <td>
+      <audio controls>
+          <source src="audio_demo/class4/f_8Jnw9bU64_000008.wav" type="audio/mpeg">
+        </audio>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+***
+
+## 3. CompSpoof V2 VS CompSpoof
+[CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-dataset/) is our previously released dataset designed for component-level spoofing detection.
+Building upon this foundation, we introduce CompSpoof V2, a substantially upgraded version with expanded task formulation.
+The key differences between CompSpoof and CompSpoof V2 are summarized below.
+
+| Aspect                | CompSpoof                        | CompSpoof V2                                                        |
+|-----------------------|----------------------------------|---------------------------------------------------------------------|
+| Data volume           | 2.5k audio clips, about 7 hours  | more than 250k audio clips, about 283 hours                         |
+| Data sources          | Single or limited sources        | Multi-source data covering diverse speech and environment components |
+| Duration              | range from 5 to 21 seconds       | 4 seconds/audio clip                                                |
+| Codec transformation  | ❌                               | ✅                                                                   |
+| Newly generated audio | ❌                               | ✅                                                                   |
+
 
 ---
 
-## 4. Audio Examples
-
-Representative audio examples are provided to illustrate different composite spoofing scenarios, including:
-
-* Clean spoofed speech
-* Spoofed speech mixed with background noise
-* Composite attacks with unseen environments or generation methods
-
-Audio examples can be found in the provided demo directory or on the dataset webpage.
-
----
-
-## 5. Dataset Structure
+## 4. Dataset Structure
 
 The dataset follows a hierarchical directory structure organized by data split:
 
-* `train/`
-* `dev/`
-* `eval/`
-
-Each split contains:
-
-* An `audio/` directory storing waveform files
-* A `metadata/` directory containing CSV annotation files
-
-All audio files are stored in a unified sampling rate and format for consistency.
+```text
+CompSpoof
+├── development                     # training and val data，including audio source
+│   ├── env_source                  # environmental sound audio used as the environmental sound component in the mixture
+│   ├── metadata                    # metadata of development set
+│       ├── train.csv
+│       └── val.csv
+│   ├── mixed_audio                 # mixed audio files, which **don't** belong to the `original` class
+│   ├── original_audio              # audios belong to `original` class
+│   └── speech_sources              # speech audio used as the speech component in the mixture
+│
+├── test1                           # test1 set data, without audio source
+│   ├── audio                       # audio files
+│   └── metadata                    # metadata of test1 set, which only has file name and labels
+│       └── test1.csv
+│
+├── test1_source (Released later)   # test1 set data，including audio source
+│   ├── env_sources                 # environmental sound audio used as the environmental sound component in the mixture
+│   ├── metadata                    # metadata of test1 set, with full annotation
+│   │   └── test1.csv
+│   ├── mixed_audio                 # mixed audio files, which **don't** belong to the `original` class
+│   ├── original_audio              # audios belong to `original` class
+│   └── speech_sources              # speech audio used as the speech component in the mixture
+|
+├── test2                           # test2 set data, without audio source
+│   ├── audio                       # audio files
+│   └── metadata                    # metadata of test2 set, which only has file name and without labels
+│       └── test2.csv
+│
+└── test2_source (Released later)   # training and val data，including audio source
+    ├── env_sources                 # environmental sound audio used as the environmental sound component in the mixture
+    ├── metadata                    # metadata of test2 set, with full annotation
+    │   └── test2.csv
+    ├── mixed_audio                 # mixed audio files, which **don't** belong to the `original` class
+    ├── original_audio              # audios belong to `original` class
+    └── speech_sources              # speech audio used as the speech component in the mixture
+```
 
 ---
 
-## 6. Dataset Source
+## 5. Audio Source
+The audio sources for each category are as follows:
 
-CompSpoof V2 is constructed by combining:
+### train & val set 
+| Label             |     original source | speech source                                      | environmental sound source                      |
+|:------------------|--------------------:|:---------------------------------------------------|:------------------------------------------------|
+| original          | AudioCaps, VggSound | -                                                  | -                                               |
+| bonafide_bonafide |                   - | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| bonafide_spoof    |                   - | CommonVoice, LibriTTS                              | EnvSDD, VcapAV                                  |
+| spoof_bonafide    |                   - | ASV5, MLAAD                                        | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| spoof_spoof       |                   - | ASV5, MLAAD                                        | EnvSDD, VcapAV                                  |
 
-* **Speech signals**: bona fide speech and spoofed speech generated by multiple speech generation systems
-* **Environmental sounds**: background noise and acoustic environment recordings from diverse sources
 
-All source materials are either publicly available or licensed for research use. The dataset is intended **strictly for non-commercial research purposes**.
+
+### test1 & test2 set
+| Label             |     original source | speech source                                      | environmental sound source                                 |
+|:------------------|--------------------:|:---------------------------------------------------|:-----------------------------------------------------------|
+| original          | AudioCaps, VggSound | -                                                  | -                                                          |
+| bonafide_bonafide |                   - | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
+| bonafide_spoof    |                   - | CommonVoice, LibriTTS                              | EnvSDD, VcapAV, New Generated                              |
+| spoof_bonafide    |                   - | ASV5, MLAAD, New Generated                         | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
+| spoof_spoof       |                   - | ASV5, MLAAD, New Generated                         | EnvSDD, VcapAV, New Generated                              |
+
 
 ---
 
-## 7. Data Splits
+## 6. Data Splits
 
 The dataset is divided into three standard splits:
 
 * **Training set**: used for model training
-* **Development set**: used for validation and hyper-parameter tuning
-* **Evaluation set**: used for final performance reporting
+* **Validation set**: used for validation and hyper-parameter tuning
+* **Test1 & Test2 set**: used for final performance reporting
 
-To assess generalization, attack types and environmental conditions are further categorized into **seen** and **unseen** subsets across splits.
+Training set and validation set have the same date source and class distribution.
 
----
+Test1 set and Test2 set share the same date source and class distribution.
+Test1 set and Test2 set share some new generated audios which are **unseen** in training and validation set.
+Portions of the test1 set and test2 set have been processed with audio **codec toolkits**.
 
-## 8. Metadata
-
-Metadata is provided in CSV format, with one row per audio file. Typical fields include:
-
-* Audio file path
-* Label (bona fide / spoof / composite spoof)
-* Speech source and generation method
-* Environment source and generation method
-* Seen / unseen category indicators
-
-The metadata enables flexible filtering and detailed error analysis.
-
----
-
-## 9. Citation
-
-If you use CompSpoof V2 in your research, please cite the corresponding paper:
-
-```
-@dataset{zhang2025esdd2compspoofv2,
-  title     = {ESDD2-CompSpoof-V2: A Composite Spoofing Dataset for Speech Anti-Spoofing},
-  author    = {Zhang, Xueping and Li, Ming},
-  year      = {2025},
-  publisher = {Hugging Face},
-  url       = {https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2}
-}
-
-```
-
-
----
-
-## 10. License
-
-This dataset is a derived dataset constructed by combining and mixing audio samples from multiple publicly available datasets.
-
-- The VCapAV dataset is released under the CC BY-NC 4.0 license.
-- The EnvSDD dataset and VGGSound dataset are released under the CC BY 4.0 license.
-- The Common Voice dataset is released under the Creative Commons CC0 1.0 Universal license.
-- The ASVspoof 5 dataset is released under the ODC-By License.
-- LibriTTS, english-conversation-corpus
-- MLAAD
-- AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound 
-Users must comply with the license terms of each original dataset.
-The authors do not claim ownership of the original audio content.
-Due to the inclusion of datasets licensed under CC-BY-NC 4.0 license, this dataset is released under the CC-BY-NC 4.0 license.
-
----
-
-## 11. Contact Information
-
-For questions, issues, or collaboration inquiries, please contact:
-* Email: [xueping.zhang@dukekunshan.edu.cn](xueping.zhang@dukekunshan.edu.cn)
-
-
-
+The quantity and proportion of audios for each category in each set are as follows:
 
 ### train set (Total: 175361)
 | Label             |   Count | Ratio   |
@@ -184,25 +330,92 @@ For questions, issues, or collaboration inquiries, please contact:
 | bonafide_bonafide |    3635 | 13.17%  |
 | spoof_bonafide    |    2987 | 10.82%  |
 
-## Audio Source
 
-### train & val set 
-| Label             |     original source | speech source                                      | environmental sound source                      |
-|:------------------|--------------------:|:---------------------------------------------------|:------------------------------------------------|
-| original          | AudioCaps, VggSound | -                                                  | -                                               |
-| bonafide_bonafide |                   - | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
-| bonafide_spoof    |                   - | CommonVoice, LibriTTS                              | EnvSDD, VcapAV                                  |
-| spoof_bonafide    |                   - | ASV5, MLAAD                                        | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
-| spoof_spoof       |                   - | ASV5, MLAAD                                        | EnvSDD, VcapAV                                  |
+---
+
+## 7. Metadata
+
+Metadata is provided in CSV format, with **one row per audio file**. Each field describes the source, generation process, and mixing configuration of the corresponding composite spoofing sample.
+
+The meaning of each field in Metadata is as follows:
+
+* **`audio_path`**: Relative path to the final mixed audio file used for training or evaluation.
+
+* **`label`**: Class label of the audio sample. Typical values include: original, bonafide_bonafide, spoof_bonafide, bonafide_spoof, spoof,spoof
+
+* **`split`**: Dataset split indicator: train, val, test
+
+* **`original_audio_source`**: Source dataset of the original audio, e.g., AudioCaps.
 
 
 
-### test1 & test2 set
-| Label             |     original source | speech source                                      | environmental sound source                             |
-|:------------------|--------------------:|:---------------------------------------------------|:-------------------------------------------------------|
-| original          | AudioCaps, VggSound | -                                                  | -                                                      |
-| bonafide_bonafide |                   - | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound        |
-| bonafide_spoof    |                   - | CommonVoice, LibriTTS                              | EnvSDD, VcapAV, MeanAudio                              |
-| spoof_bonafide    |                   - | ASV5, MLAAD, SoulX-Podcast                         | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound        |
-| spoof_spoof       |                   - | ASV5, MLAAD, SoulX-Podcast                         | EnvSDD, VcapAV, MeanAudio                              |
+
+* **`speech_path`**: Path to the speech signal used as the speech component in the mixture.
+
+* **`speech_source`**: Source dataset of the speech signal, e.g., ASV5, CommonVoice.
+
+* **`speech_generation_mothed`**: Generation method used to produce the speech signal, e.g., TTS (text-to-speech), VC (voice-conversion).
+
+* **`speech_generation_source`**: Dataset to generate the spoofed speech, e.g., a spoofed speech is generated by TTS, the text for generation is the source. 
+
+* **`speech_generation_model`**: Model used to generate the spoofed speech.
+
+
+
+* **`env_path`**: Path to the environmental sound used as the environmental sound component in the mixture.
+
+* **`env_source`**: Source dataset of the environmental sound, e.g., EnvSDD, VcapAV.
+
+* **`env_generation_mothed`**: Method used to generate the spoofed environmental sound, e.g.,TTA (text-to-audio).
+
+* **`env_generation_source`**: Dataset to  generate the spoofed environmental sound, e.g., a spoofed **speech** is generated by **TTS**, the text for generation is the source. 
+
+* **`env_generation_model`**:Model used to generate the spoofed environmental sound.
+
+
+
+* **`mix_target_snr`**: Target signal-to-noise ratio (SNR, in dB) used when mixing the speech and environmental sound.
+
+---
+
+## 8. Citation
+
+If you use CompSpoof V2 in your research, please cite the corresponding paper:
+
+```
+@dataset{zhang2025esdd2compspoofv2,
+  title     = {ESDD2-CompSpoof-V2: A Composite Spoofing Dataset for Speech Anti-Spoofing},
+  author    = {Zhang, Xueping and Li, Ming},
+  year      = {2025},
+  publisher = {Hugging Face},
+  url       = {https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2}
+}
+
+```
+
+
+---
+
+## 9. License
+This dataset is a derived dataset constructed by combining and mixing audio samples from multiple publicly available datasets.
+  - The **MLAAD** and **VCapAV** datasets are released under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
+  - The **LibriTTS**, **EnvSDD** and **VGGSound** datasets is released under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+  - The **Common Voice** dataset is released under the Creative Commons [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.en) license.
+  - The **ASVspoof 5** dataset is released under the [ODC-By](https://huggingface.co/datasets/jungjee/asvspoof5/blob/main/LICENSE.txt) License.
+  - The **english-conversation-corpus** dataset is released under the [GPLv3](https://github.com/thuhcsi/english-conversation-corpus/blob/master/LICENSE)License.
+  - The **AudioCaps** dataset is released under the [mit](https://choosealicense.com/licenses/mit/) License.
+  - The **TUTASC**, **TUTSED** and **UrbanSound** datasets are released under the Non-Commercial License.
+
+
+  Users must comply with the license terms of each original dataset.
+  The authors do **not** claim ownership of the original audio content.
+  Due to the inclusion of datasets licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license, **this dataset is released under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license**.
+
+---
+
+## 10. Contact Information
+
+For questions, issues, or collaboration inquiries, please contact:
+* Email: [xueping.zhang@dukekunshan.edu.cn](xueping.zhang@dukekunshan.edu.cn)
+
 
