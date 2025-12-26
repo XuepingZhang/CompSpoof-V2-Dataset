@@ -1,4 +1,4 @@
-# 🎙️ CompSpoof V2 Dataset
+
 
 ## 1. Introduction
 
