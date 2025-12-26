@@ -1,25 +1,25 @@
 # CompSpoof V2 Dataset
 
-
-***
-
-
 ## 1. Introduction
 
-CompSpoof V2 is a composite spoofing dataset designed for **speech anti-spoofing** research under realistic and challenging acoustic conditions. Unlike conventional spoofing datasets that focus on isolated attack signals, CompSpoof V2 explicitly models the **coupling between speech generation attacks and environmental interference**, reflecting real-world replay, transmission, and deployment scenarios.
+CompSpoof V2 is a dataset designed for component-level anti-spoofing detection research, where either the speech or the environmental sound component (or both) may be spoofed.
 
-Building upon CompSpoof V1, this version introduces a richer combination of attack sources, environmental sounds, and mixing strategies, with a clear separation between *seen* and *unseen* conditions to better evaluate generalization ability.
+CompSpoof V2 contains over 250k audio samples, with a total duration of approximately 283 hours. 
+Each audio sample has a fixed length of 4 seconds and is provided at multiple sampling rates, enabling a more faithful simulation of real-world acoustic and system-level variations.
+
+Building upon [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-dataset/), CompSpoof V2 significantly expands the diversity of attack sources, environmental sounds, and mixing strategies. 
+In addition, newly generated audio samples are distributed across the test set and are specifically designed to serve as detection data under unseen conditions. 
+To further simulate realistic transmission effects, portions of the test set are processed using various audio codec toolkits.
 
 
- **🤗Download**: [CompSpoof Download Link](https://huggingface.co/datasets/XuepingZhang/CompSpoof)
- **Baseline code**: [CompSpoof Download Link](https://huggingface.co/datasets/XuepingZhang/CompSpoof)
+**CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
+
+**Baseline code:** [https://github.com/XuepingZhang/ESDD2-Baseline](https://github.com/XuepingZhang/ESDD2-Baseline)
 
 ---
 
-## 2. Audio Examples
-Below are audio samples from the **CompSpoof** dataset. For each class, we provide the **mixed/original audio**, along with the **speech** and **environment** sources. 
-
---- 
+## 2. Audio Class Description and Samples
+Below are audio samples from the **CompSpoof V2** dataset. For each class, we provide the **mixed/original audio**, along with the **speech** and **environment** sources.
 
 ### Class 0 — Original 
 
@@ -37,7 +37,7 @@ Below are audio samples from the **CompSpoof** dataset. For each class, we provi
     <tr>
       <td>
         <audio controls>
-          <source src="audio_demo/class0/bonafide_0_028.mp3" type="audio/mpeg">
+          <source src="audio_demo/class0/original.wav" type="audio/mpeg">
         </audio>
       </td>
     </tr>
@@ -62,17 +62,17 @@ Below are audio samples from the **CompSpoof** dataset. For each class, we provi
     <tr>
       <td>
         <audio controls>
-          <source src="audio_demo/class1/bonafide_bonafide_0471.wav" type="audio/mpeg">
+          <source src="audio_demo/class1/52257_bonafide_bonafide.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class1/D_0002500345.flac" type="audio/mpeg">
+          <source src="audio_demo/class1/common_voice_en_161723_chunk0.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class1/-OQ3KFwzLCI_474.mp3" type="audio/mpeg">
+          <source src="audio_demo/class1/rXHHLtG_iGQ_000562.mp4_chunk1.wav" type="audio/mpeg">
         </audio>
       </td>
     </tr>
@@ -97,17 +97,17 @@ Below are audio samples from the **CompSpoof** dataset. For each class, we provi
     <tr>
       <td>
         <audio controls>
-          <source src="audio_demo/class2/spoof_bonafide_0099.wav" type="audio/mpeg">
+          <source src="audio_demo/class2/48570_spoof_bonafide.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class2/T_0000011037.flac" type="audio/mpeg">
+          <source src="audio_demo/class2/hunters_space_09_f000072_chunk2.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class2/-LGTb-xyjzA_11.mp3" type="audio/mpeg">
+          <source src="audio_demo/class2/uBaRlBqQj3A_000496.mp4_chunk2.wav" type="audio/mpeg">
         </audio>
       </td>
     </tr>
@@ -133,17 +133,17 @@ Below are audio samples from the **CompSpoof** dataset. For each class, we provi
     <tr>
       <td>
         <audio controls>
-          <source src="audio_demo/class3/bonafide_spoof_0248.wav" type="audio/mpeg">
+          <source src="audio_demo/class3/124039_bonafide_spoof.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class3/D_0001820722.flac" type="audio/mpeg">
+          <source src="audio_demo/class3/common_voice_en_22168656_chunk0.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class3/ViP3M-Hlm18_000030.wav" type="audio/mpeg">
+          <source src="audio_demo/class3/metro_station-barcelona-61-1847-a_0.wav" type="audio/mpeg">
         </audio>
       </td>
     </tr>
@@ -169,17 +169,17 @@ Below are audio samples from the **CompSpoof** dataset. For each class, we provi
     <tr>
       <td>
         <audio controls>
-          <source src="audio_demo/class4/spoof_spoof_0439.wav" type="audio/mpeg">
+          <source src="audio_demo/class4/513140_spoof_spoof.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class4/T_0000141802.flac" type="audio/mpeg">
+          <source src="audio_demo/class4/jane_eyre_21_f000330_chunk0.wav" type="audio/mpeg">
         </audio>
       </td>
       <td>
       <audio controls>
-          <source src="audio_demo/class4/f_8Jnw9bU64_000008.wav" type="audio/mpeg">
+          <source src="audio_demo/class4/b033_0.wav" type="audio/mpeg">
         </audio>
       </td>
     </tr>
@@ -253,24 +253,24 @@ CompSpoof
 The audio sources for each category are as follows:
 
 ### train & val set 
-| Label             |     original source | speech source                                      | environmental sound source                      |
-|:------------------|--------------------:|:---------------------------------------------------|:------------------------------------------------|
+| Label             | original source     | speech source                                      | environmental sound source                      |
+|-------------------|---------------------|----------------------------------------------------|-------------------------------------------------|
 | original          | AudioCaps, VggSound | -                                                  | -                                               |
-| bonafide_bonafide |                   - | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
-| bonafide_spoof    |                   - | CommonVoice, LibriTTS                              | EnvSDD, VcapAV                                  |
-| spoof_bonafide    |                   - | ASV5, MLAAD                                        | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
-| spoof_spoof       |                   - | ASV5, MLAAD                                        | EnvSDD, VcapAV                                  |
+| bonafide_bonafide | -                   | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| bonafide_spoof    | -                   | CommonVoice, LibriTTS                              | EnvSDD, VcapAV                                  |
+| spoof_bonafide    | -                   | ASV5, MLAAD                                        | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| spoof_spoof       | -                   | ASV5, MLAAD                                        | EnvSDD, VcapAV                                  |
 
 
 
 ### test1 & test2 set
-| Label             |     original source | speech source                                      | environmental sound source                                 |
-|:------------------|--------------------:|:---------------------------------------------------|:-----------------------------------------------------------|
+| Label             | original source     | speech source                                      | environmental sound source                                 |
+|-------------------|---------------------|----------------------------------------------------|------------------------------------------------------------|
 | original          | AudioCaps, VggSound | -                                                  | -                                                          |
-| bonafide_bonafide |                   - | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
-| bonafide_spoof    |                   - | CommonVoice, LibriTTS                              | EnvSDD, VcapAV, New Generated                              |
-| spoof_bonafide    |                   - | ASV5, MLAAD, New Generated                         | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
-| spoof_spoof       |                   - | ASV5, MLAAD, New Generated                         | EnvSDD, VcapAV, New Generated                              |
+| bonafide_bonafide | -                   | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
+| bonafide_spoof    | -                   | CommonVoice, LibriTTS                              | EnvSDD, VcapAV, New Generated                              |
+| spoof_bonafide    | -                   | ASV5, MLAAD, New Generated                         | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
+| spoof_spoof       | -                   | ASV5, MLAAD, New Generated                         | EnvSDD, VcapAV, New Generated                              |
 
 
 ---
@@ -292,43 +292,43 @@ Portions of the test1 set and test2 set have been processed with audio **codec t
 The quantity and proportion of audios for each category in each set are as follows:
 
 ### train set (Total: 175361)
-| Label             |   Count | Ratio   |
-|:------------------|--------:|:--------|
-| bonafide_spoof    |   50361 | 28.72%  |
-| original          |   48639 | 27.74%  |
-| spoof_spoof       |   29413 | 16.77%  |
-| bonafide_bonafide |   25189 | 14.36%  |
-| spoof_bonafide    |   21759 | 12.41%  |
+| Label             | Count   | Ratio   |
+|:------------------|---------|---------|
+| bonafide_spoof    | 50361   | 28.72%  |
+| original          | 48639   | 27.74%  |
+| spoof_spoof       | 29413   | 16.77%  |
+| bonafide_bonafide | 25189   | 14.36%  |
+| spoof_bonafide    | 21759   | 12.41%  |
 
 
 ### val set (Total: 24864)
-| Label             |   Count | Ratio   |
-|:------------------|--------:|:--------|
-| bonafide_spoof    |    8071 | 32.46%  |
-| original          |    6939 | 27.91%  |
-| spoof_spoof       |    4657 | 18.73%  |
-| bonafide_bonafide |    2784 | 11.20%  |
-| spoof_bonafide    |    2413 | 9.70%   |
+| Label             | Count   | Ratio   |
+|:------------------|---------|---------|
+| bonafide_spoof    | 8071    | 32.46%  |
+| original          | 6939    | 27.91%  |
+| spoof_spoof       | 4657    | 18.73%  |
+| bonafide_bonafide | 2784    | 11.20%  |
+| spoof_bonafide    | 2413    | 9.70%   |
 
 
 
 ### test1 set (Total: 27605)
-| Label             |   Count | Ratio   |
-|:------------------|--------:|:--------|
-| bonafide_spoof    |    7655 | 27.73%  |
-| original          |    7455 | 27.01%  |
-| spoof_spoof       |    5945 | 21.54%  |
-| bonafide_bonafide |    3570 | 12.93%  |
-| spoof_bonafide    |    2980 | 10.80%  |
+| Label             | Count   | Ratio   |
+|:------------------|---------|---------|
+| bonafide_spoof    | 7655    | 27.73%  |
+| original          | 7455    | 27.01%  |
+| spoof_spoof       | 5945    | 21.54%  |
+| bonafide_bonafide | 3570    | 12.93%  |
+| spoof_bonafide    | 2980    | 10.80%  |
 
 ### test2 set (Total: 27603)
-| Label             |   Count | Ratio   |
-|:------------------|--------:|:--------|
-| bonafide_spoof    |    7672 | 27.79%  |
-| original          |    7415 | 26.86%  |
-| spoof_spoof       |    5894 | 21.35%  |
-| bonafide_bonafide |    3635 | 13.17%  |
-| spoof_bonafide    |    2987 | 10.82%  |
+| Label             | Count   | Ratio   |
+|:------------------|---------|---------|
+| bonafide_spoof    | 7672    | 27.79%  |
+| original          | 7415    | 26.86%  |
+| spoof_spoof       | 5894    | 21.35%  |
+| bonafide_bonafide | 3635    | 13.17%  |
+| spoof_bonafide    | 2987    | 10.82%  |
 
 
 ---
