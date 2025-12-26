@@ -12,7 +12,7 @@ Building upon [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-datas
 🔊 To further simulate realistic transmission effects, portions of the test set are processed using various audio codec toolkits.
 
 
-**🤗CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
+**🤗 CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
 
 **💻 Baseline code:** [https://github.com/XuepingZhang/ESDD2-Baseline](https://github.com/XuepingZhang/ESDD2-Baseline)
 
