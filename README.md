@@ -1,20 +1,20 @@
-# CompSpoof V2 Dataset
+# 🎙️ CompSpoof V2 Dataset
 
 ## 1. Introduction
 
 CompSpoof V2 is a dataset designed for component-level anti-spoofing detection research, where either the speech or the environmental sound component (or both) may be spoofed.
 
-CompSpoof V2 contains over 250k audio samples, with a total duration of approximately 283 hours. 
-Each audio sample has a fixed length of 4 seconds and is provided at multiple sampling rates, enabling a more faithful simulation of real-world acoustic and system-level variations.
+📊 CompSpoof V2 contains over 250k audio samples, with a total duration of approximately 283 hours. 
+⏱️ Each audio sample has a fixed length of 4 seconds and is provided at multiple sampling rates, enabling a more faithful simulation of real-world acoustic and system-level variations.
 
 Building upon [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-dataset/), CompSpoof V2 significantly expands the diversity of attack sources, environmental sounds, and mixing strategies. 
-In addition, newly generated audio samples are distributed across the test set and are specifically designed to serve as detection data under unseen conditions. 
-To further simulate realistic transmission effects, portions of the test set are processed using various audio codec toolkits.
+✨ In addition, newly generated audio samples are distributed across the test set and are specifically designed to serve as detection data under unseen conditions. 
+🔊 To further simulate realistic transmission effects, portions of the test set are processed using various audio codec toolkits.
 
 
-**CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
+**🤗CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
 
-**Baseline code:** [https://github.com/XuepingZhang/ESDD2-Baseline](https://github.com/XuepingZhang/ESDD2-Baseline)
+**💻 Baseline code:** [https://github.com/XuepingZhang/ESDD2-Baseline](https://github.com/XuepingZhang/ESDD2-Baseline)
 
 ---
 
@@ -196,9 +196,9 @@ The key differences between CompSpoof and CompSpoof V2 are summarized below.
 
 | Aspect                | CompSpoof                       | CompSpoof V2                                                                                                                       |
 |-----------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| Data volume           | 2.5k audio clips, about 7 hours | more than 250k audio clips, about 283 hours                                                                                        |
+| Data volume           | 2.5k audio clips, about 7 hours | 📊 more than 250k audio clips, about 283 hours                                                                                        |
 | Data sources          | SSTC, ASV5, VggSound, VcapAV, Common Voice  | AudioCaps, VggSound, CommonVoice, LibriTTS, english-conversation-corpus,ASV5, MLAAD,TUTASC, TUTSED, UrbanSound, VGGSound, EnvSDD, VcapAV |
-| Duration              | range from 5 to 21 seconds      | 4 seconds/audio clip                                                                                                               |
+| Duration              | range from 5 to 21 seconds      | ⏱️ 4 seconds/audio clip                                                                                                               |
 | Codec transformation  | ❌                               | ✅                                                                                                                                  |
 | Newly generated audio | ❌                               | ✅                                                                                                                                  |
 
@@ -252,7 +252,7 @@ CompSpoof
 ## 5. Audio Source
 The audio sources for each category are as follows:
 
-### train & val set 
+### 🏋️ train & val set 
 
 | Label             | Original Source      | Speech Source                                      | Environmental Sound Source                      |
 |-------------------|--------------------|--------------------------------------------------|------------------------------------------------|
@@ -264,7 +264,7 @@ The audio sources for each category are as follows:
 
 
 
-### test1 & test2 set
+### 🏁 test1 & test2 set
 
 | Label             | original source     | speech source                                      | environmental sound source                      |
 |-------------------|---------------------|----------------------------------------------------|-------------------------------------------------|
@@ -293,7 +293,7 @@ Portions of the test1 set and test2 set have been processed with audio **codec t
 
 The quantity and proportion of audios for each category in each set are as follows:
 
-### train set (Total: 175361)
+### 📊 train set (Total: 175361)
 
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
@@ -304,7 +304,7 @@ The quantity and proportion of audios for each category in each set are as follo
 | spoof_bonafide    | 21759   | 12.41%  |
 
 
-### val set (Total: 24864)
+### 📊 val set (Total: 24864)
 
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
@@ -316,7 +316,7 @@ The quantity and proportion of audios for each category in each set are as follo
 
 
 
-### test1 set (Total: 27605)
+### 📊 test1 set (Total: 27605)
 
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
@@ -326,7 +326,7 @@ The quantity and proportion of audios for each category in each set are as follo
 | bonafide_bonafide | 3570    | 12.93%  |
 | spoof_bonafide    | 2980    | 10.80%  |
 
-### test2 set (Total: 27603)
+### 📊 test2 set (Total: 27603)
 
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
@@ -341,7 +341,7 @@ The quantity and proportion of audios for each category in each set are as follo
 
 ## 7. Metadata
 
-Metadata is provided in CSV format, with **one row per audio file**. Each field describes the source, generation process, and mixing configuration of the corresponding composite spoofing sample.
+🗂️ Metadata is provided in CSV format, with **one row per audio file**. Each field describes the source, generation process, and mixing configuration of the corresponding composite spoofing sample.
 
 The meaning of each field in Metadata is as follows:
 
@@ -384,9 +384,9 @@ The meaning of each field in Metadata is as follows:
 
 ---
 
-## 8. Citation
+## 8. Citation 
 
-If you use CompSpoof V2 in your research, please cite the corresponding paper:
+📚 If you use CompSpoof V2 in your research, please cite the corresponding paper:
 
 ```
 @dataset{zhang2025esdd2compspoofv2,
@@ -402,7 +402,7 @@ If you use CompSpoof V2 in your research, please cite the corresponding paper:
 
 ---
 
-## 9. License
+## 9. License 🔏
 This dataset is a derived dataset constructed by combining and mixing audio samples from multiple publicly available datasets.
   - The **MLAAD** and **VCapAV** datasets are released under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
   - The **LibriTTS**, **EnvSDD** and **VGGSound** datasets is released under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
@@ -422,6 +422,6 @@ This dataset is a derived dataset constructed by combining and mixing audio samp
 ## 10. Contact Information
 
 For questions, issues, or collaboration inquiries, please contact:
-* Email: [xueping.zhang@dukekunshan.edu.cn](xueping.zhang@dukekunshan.edu.cn)
+* ✉️ Email: [xueping.zhang@dukekunshan.edu.cn](xueping.zhang@dukekunshan.edu.cn)
 
 
