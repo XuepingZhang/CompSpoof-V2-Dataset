@@ -253,24 +253,26 @@ CompSpoof
 The audio sources for each category are as follows:
 
 ### train & val set 
-| Label             | original source     | speech source                                      | environmental sound source                      |
-|-------------------|---------------------|----------------------------------------------------|-------------------------------------------------|
-| original          | AudioCaps, VggSound | -                                                  | -                                               |
-| bonafide_bonafide | -                   | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
-| bonafide_spoof    | -                   | CommonVoice, LibriTTS                              | EnvSDD, VcapAV                                  |
-| spoof_bonafide    | -                   | ASV5, MLAAD                                        | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
-| spoof_spoof       | -                   | ASV5, MLAAD                                        | EnvSDD, VcapAV                                  |
+
+| Label             | Original Source      | Speech Source                                      | Environmental Sound Source                      |
+|-------------------|--------------------|--------------------------------------------------|------------------------------------------------|
+| original          | AudioCaps, VggSound | -                                                | -                                              |
+| bonafide_bonafide | -                  | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| bonafide_spoof    | -                  | CommonVoice, LibriTTS                             | EnvSDD, VcapAV                                 |
+| spoof_bonafide    | -                  | ASV5, MLAAD                                      | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| spoof_spoof       | -                  | ASV5, MLAAD                                      | EnvSDD, VcapAV                                 |
 
 
 
 ### test1 & test2 set
-| Label             | original source     | speech source                                      | environmental sound source                                 |
-|-------------------|---------------------|----------------------------------------------------|------------------------------------------------------------|
-| original          | AudioCaps, VggSound | -                                                  | -                                                          |
-| bonafide_bonafide | -                   | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
-| bonafide_spoof    | -                   | CommonVoice, LibriTTS                              | EnvSDD, VcapAV, New Generated                              |
-| spoof_bonafide    | -                   | ASV5, MLAAD, New Generated                         | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound            |
-| spoof_spoof       | -                   | ASV5, MLAAD, New Generated                         | EnvSDD, VcapAV, New Generated                              |
+
+| Label             | original source     | speech source                                      | environmental sound source                      |
+|-------------------|---------------------|----------------------------------------------------|-------------------------------------------------|
+| original          | AudioCaps, VggSound | -                                                  | -                                               |
+| bonafide_bonafide | -                   | CommonVoice, LibriTTS, english-conversation-corpus | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| bonafide_spoof    | -                   | CommonVoice, LibriTTS                              | EnvSDD, VcapAV, **New Generated**                   |
+| spoof_bonafide    | -                   | ASV5, MLAAD, **New Generated**                         | AudioCaps, TUTASC, TUTSED, UrbanSound, VGGSound |
+| spoof_spoof       | -                   | ASV5, MLAAD, **New Generated**                         | EnvSDD, VcapAV, **New Generated**                   |
 
 
 ---
@@ -292,6 +294,7 @@ Portions of the test1 set and test2 set have been processed with audio **codec t
 The quantity and proportion of audios for each category in each set are as follows:
 
 ### train set (Total: 175361)
+
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
 | bonafide_spoof    | 50361   | 28.72%  |
@@ -302,6 +305,7 @@ The quantity and proportion of audios for each category in each set are as follo
 
 
 ### val set (Total: 24864)
+
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
 | bonafide_spoof    | 8071    | 32.46%  |
@@ -313,6 +317,7 @@ The quantity and proportion of audios for each category in each set are as follo
 
 
 ### test1 set (Total: 27605)
+
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
 | bonafide_spoof    | 7655    | 27.73%  |
@@ -322,6 +327,7 @@ The quantity and proportion of audios for each category in each set are as follo
 | spoof_bonafide    | 2980    | 10.80%  |
 
 ### test2 set (Total: 27603)
+
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
 | bonafide_spoof    | 7672    | 27.79%  |
@@ -348,7 +354,7 @@ The meaning of each field in Metadata is as follows:
 * **`original_audio_source`**: Source dataset of the original audio, e.g., AudioCaps.
 
 
-
+---
 
 * **`speech_path`**: Path to the speech signal used as the speech component in the mixture.
 
@@ -360,7 +366,7 @@ The meaning of each field in Metadata is as follows:
 
 * **`speech_generation_model`**: Model used to generate the spoofed speech.
 
-
+---
 
 * **`env_path`**: Path to the environmental sound used as the environmental sound component in the mixture.
 
@@ -372,7 +378,7 @@ The meaning of each field in Metadata is as follows:
 
 * **`env_generation_model`**:Model used to generate the spoofed environmental sound.
 
-
+---
 
 * **`mix_target_snr`**: Target signal-to-noise ratio (SNR, in dB) used when mixing the speech and environmental sound.
 
