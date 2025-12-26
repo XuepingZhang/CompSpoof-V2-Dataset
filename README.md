@@ -194,13 +194,13 @@ Below are audio samples from the **CompSpoof V2** dataset. For each class, we pr
 Building upon this foundation, we introduce CompSpoof V2, a substantially upgraded version with expanded task formulation.
 The key differences between CompSpoof and CompSpoof V2 are summarized below.
 
-| Aspect                | CompSpoof                        | CompSpoof V2                                                        |
-|-----------------------|----------------------------------|---------------------------------------------------------------------|
-| Data volume           | 2.5k audio clips, about 7 hours  | more than 250k audio clips, about 283 hours                         |
-| Data sources          | Single or limited sources        | Multi-source data covering diverse speech and environment components |
-| Duration              | range from 5 to 21 seconds       | 4 seconds/audio clip                                                |
-| Codec transformation  | ❌                               | ✅                                                                   |
-| Newly generated audio | ❌                               | ✅                                                                   |
+| Aspect                | CompSpoof                       | CompSpoof V2                                                                                                                       |
+|-----------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Data volume           | 2.5k audio clips, about 7 hours | more than 250k audio clips, about 283 hours                                                                                        |
+| Data sources          | SSTC, ASV5, VggSound, VcapAV, Common Voice  | AudioCaps, VggSound, CommonVoice, LibriTTS, english-conversation-corpus,ASV5, MLAAD,TUTASC, TUTSED, UrbanSound, VGGSound, EnvSDD, VcapAV |
+| Duration              | range from 5 to 21 seconds      | 4 seconds/audio clip                                                                                                               |
+| Codec transformation  | ❌                               | ✅                                                                                                                                  |
+| Newly generated audio | ❌                               | ✅                                                                                                                                  |
 
 
 ---
