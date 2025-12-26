@@ -9,7 +9,7 @@ CompSpoof V2 is a dataset designed for component-level anti-spoofing detection r
 
 Building upon [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-dataset/), CompSpoof V2 significantly expands the diversity of attack sources, environmental sounds, and mixing strategies. 
 ✨ In addition, newly generated audio samples are distributed across the test set and are specifically designed to serve as detection data under unseen conditions. 
-🔊 To further simulate realistic transmission effects, portions of the test set are processed using various audio codec toolkits.
+🔊 To further simulate realistic transmission effects, portions of the test set are processed by audio codec transformation.
 
 
 **🤗 CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
