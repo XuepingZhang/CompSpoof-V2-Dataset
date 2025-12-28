@@ -220,28 +220,28 @@ CompSpoof
 │   ├── original_audio              # audios belong to `original` class
 │   └── speech_sources              # speech audio used as the speech component in the mixture
 │
-├── test1                           # test1 set data, without audio source
+├── eval                            # eval set data, without audio source
 │   ├── audio                       # audio files
-│   └── metadata                    # metadata of test1 set, which only has file name and labels
-│       └── test1.csv
+│   └── metadata                    # metadata of eval set, which only has file name
+│       └── eval.csv
 │
-├── test1_source (Released later)   # test1 set data，including audio source
+├── eval_source (Released later)    # eval set data，including audio source
 │   ├── env_sources                 # environmental sound audio used as the environmental sound component in the mixture
-│   ├── metadata                    # metadata of test1 set, with full annotation
-│   │   └── test1.csv
+│   ├── metadata                    # metadata of eval set, with full annotation
+│   │   └── eval.csv
 │   ├── mixed_audio                 # mixed audio files, which **don't** belong to the `original` class
 │   ├── original_audio              # audios belong to `original` class
 │   └── speech_sources              # speech audio used as the speech component in the mixture
 |
-├── test2                           # test2 set data, without audio source
+├── test                            # test set data, without audio source
 │   ├── audio                       # audio files
-│   └── metadata                    # metadata of test2 set, which only has file name and without labels
-│       └── test2.csv
+│   └── metadata                    # metadata of test set, which only has file name
+│       └── test.csv
 │
-└── test2_source (Released later)   # training and val data，including audio source
+└── test_source (Released later)    # test set audio data，including audio source
     ├── env_sources                 # environmental sound audio used as the environmental sound component in the mixture
-    ├── metadata                    # metadata of test2 set, with full annotation
-    │   └── test2.csv
+    ├── metadata                    # metadata of test set, with full annotation
+    │   └── test.csv
     ├── mixed_audio                 # mixed audio files, which **don't** belong to the `original` class
     ├── original_audio              # audios belong to `original` class
     └── speech_sources              # speech audio used as the speech component in the mixture
@@ -264,7 +264,7 @@ The audio sources for each category are as follows:
 
 
 
-### 🏁 test1 & test2 set
+### 🏁 eval & test set
 
 | Label             | original source     | speech source                                      | environmental sound source                      |
 |-------------------|---------------------|----------------------------------------------------|-------------------------------------------------|
@@ -283,13 +283,13 @@ The dataset is divided into three standard splits:
 
 * **Training set**: used for model training
 * **Validation set**: used for validation and hyper-parameter tuning
-* **Test1 & Test2 set**: used for final performance reporting
+* **Eval & Test set**: used for final performance reporting
 
 Training set and validation set have the same date source and class distribution.
 
-Test1 set and Test2 set share the same date source and class distribution.
-Test1 set and Test2 set share some new generated audios which are **unseen** in training and validation set.
-Portions of the test1 set and test2 set have been processed with audio **codec toolkits**.
+Eval set and Test set share the same date source and class distribution.
+Eval set and Test set share some new generated audios which are **unseen** in training and validation set.
+Portions of the Eval set and Test set have been processed with audio **codec toolkits**.
 
 The quantity and proportion of audios for each category in each set are as follows:
 
@@ -316,7 +316,7 @@ The quantity and proportion of audios for each category in each set are as follo
 
 
 
-### 📊 test1 set (Total: 27605)
+### 📊 eval set (Total: 27605)
 
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
@@ -326,7 +326,7 @@ The quantity and proportion of audios for each category in each set are as follo
 | bonafide_bonafide | 3570    | 12.93%  |
 | spoof_bonafide    | 2980    | 10.80%  |
 
-### 📊 test2 set (Total: 27603)
+### 📊 test set (Total: 27603)
 
 | Label             | Count   | Ratio   |
 |:------------------|---------|---------|
@@ -349,7 +349,7 @@ The meaning of each field in Metadata is as follows:
 
 * **`label`**: Class label of the audio sample. Typical values include: original, bonafide_bonafide, spoof_bonafide, bonafide_spoof, spoof,spoof
 
-* **`split`**: Dataset split indicator: train, val, test
+* **`split`**: Dataset split indicator: train, val, eval, test
 
 * **`original_audio_source`**: Source dataset of the original audio, e.g., AudioCaps.
 
