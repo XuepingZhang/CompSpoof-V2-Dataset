@@ -9,7 +9,6 @@ CompSpoof V2 is a dataset designed for component-level anti-spoofing detection r
 
 Building upon [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-dataset/), CompSpoof V2 significantly expands the diversity of attack sources, environmental sounds, and mixing strategies. 
 ✨ In addition, newly generated audio samples are distributed across the test set and are specifically designed to serve as detection data under unseen conditions. 
-🔊 To further simulate realistic transmission effects, portions of the test set are processed by audio codec transformation.
 
 
 **🤗 CompSpoof V2 Download Link:** [https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/](https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2/)
@@ -199,7 +198,6 @@ The key differences between CompSpoof and CompSpoof V2 are summarized below.
 | Data volume           | 2.5k audio clips, about 7 hours | 📊 more than 250k audio clips, about 283 hours                                                                                        |
 | Data sources          | SSTC, ASV5, VggSound, VcapAV, Common Voice  | AudioCaps, VggSound, CommonVoice, LibriTTS, english-conversation-corpus,ASV5, MLAAD,TUTASC, TUTSED, UrbanSound, VGGSound, EnvSDD, VcapAV |
 | Duration              | range from 5 to 21 seconds      | ⏱️ 4 seconds/audio clip                                                                                                               |
-| Codec transformation  | ❌                               | ✅                                                                                                                                  |
 | Newly generated audio | ❌                               | ✅                                                                                                                                  |
 
 
@@ -289,7 +287,7 @@ Training set and validation set have the same date source and class distribution
 
 Eval set and Test set share the same date source and class distribution.
 Eval set and Test set share some new generated audios which are **unseen** in training and validation set.
-Portions of the Eval set and Test set have been processed with audio **codec toolkits**.
+
 
 The quantity and proportion of audios for each category in each set are as follows:
 
