@@ -17,7 +17,34 @@ Building upon [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-datas
 
 ---
 
-## 2. Audio Class Description and Samples
+
+## 2. Download and Setup
+Step 1: Vist https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2
+
+Step 2: Read and acknowledge license (you need to click the 'acknowledge license' button)
+
+Step 3: Install huggingface_hub and login
+```
+pip install huggingface_hub[hf_transfer]
+
+huggingface-cli login     # input your huggingface login token
+```
+Step 4: download and unzip
+```
+hf download XuepingZhang/ESDD2-CompSpoof-V2 --repo-type dataset --local-dir ./CompSpoofV2
+
+cd CompSpoofV2
+
+tar -zxvf eval.tar.gz
+
+cat development.tar.gz.part_* > development.tar.gz
+
+tar -zxvf development.tar.gz
+```
+
+---
+
+## 3. Audio Class Description and Samples
 Below are audio samples from the **CompSpoof V2** dataset. For each class, we provide the **mixed/original audio**, along with the **speech** and **environment** sources.
 
 ### Class 0 — Original 
@@ -188,7 +215,7 @@ Below are audio samples from the **CompSpoof V2** dataset. For each class, we pr
 
 ***
 
-## 3. CompSpoof V2 VS CompSpoof
+## 4. CompSpoof V2 VS CompSpoof
 [CompSpoof dataset](https://xuepingzhang.github.io/CompSpoof-dataset/) is our previously released dataset designed for component-level spoofing detection.
 Building upon this foundation, we introduce CompSpoof V2, a substantially upgraded version with expanded task formulation.
 The key differences between CompSpoof and CompSpoof V2 are summarized below.
@@ -203,7 +230,7 @@ The key differences between CompSpoof and CompSpoof V2 are summarized below.
 
 ---
 
-## 4. Dataset Structure
+## 5. Dataset Structure
 
 The dataset follows a hierarchical directory structure organized by data split:
 
@@ -247,7 +274,7 @@ CompSpoof
 
 ---
 
-## 5. Audio Source
+## 6. Audio Source
 The audio sources for each category are as follows:
 
 ### 🏋️ train & val set 
@@ -275,7 +302,7 @@ The audio sources for each category are as follows:
 
 ---
 
-## 6. Data Splits
+## 7. Data Splits
 
 The dataset is divided into three standard splits:
 
@@ -337,7 +364,7 @@ The quantity and proportion of audios for each category in each set are as follo
 
 ---
 
-## 7. Metadata
+## 8. Metadata
 
 🗂️ Metadata is provided in CSV format, with **one row per audio file**. Each field describes the source, generation process, and mixing configuration of the corresponding composite spoofing sample.
 
@@ -382,7 +409,7 @@ The meaning of each field in Metadata is as follows:
 
 ---
 
-## 8. Citation 
+## 9. Citation 
 
 📚 If you use CompSpoof V2 in your research, please cite the corresponding paper:
 
@@ -400,7 +427,7 @@ The meaning of each field in Metadata is as follows:
 
 ---
 
-## 9. License 🔏
+## 10. License 🔏
 This dataset is a derived dataset constructed by combining and mixing audio samples from multiple publicly available datasets.
   - The **MLAAD** and **VCapAV** datasets are released under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
   - The **LibriTTS**, **EnvSDD** and **VGGSound** datasets is released under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
@@ -417,7 +444,7 @@ This dataset is a derived dataset constructed by combining and mixing audio samp
 
 ---
 
-## 10. Contact Information
+## 11. Contact Information
 
 For questions, issues, or collaboration inquiries, please contact:
 * ✉️ Email: [xueping.zhang@dukekunshan.edu.cn](xueping.zhang@dukekunshan.edu.cn)
