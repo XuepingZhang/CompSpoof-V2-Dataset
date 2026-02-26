@@ -428,7 +428,7 @@ The meaning of each field in Metadata is as follows:
 ---
 
 ## 10. License 🔏
-This dataset is a derived dataset constructed by combining and mixing audio samples from multiple publicly available datasets.
+The part of this dataset is a derived dataset constructed by combining and mixing audio samples from multiple publicly available datasets.
   - The **MLAAD** and **VCapAV** datasets are released under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.
   - The **LibriTTS**, **EnvSDD** and **VGGSound** datasets is released under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
   - The **Common Voice** dataset is released under the Creative Commons [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.en) license.
