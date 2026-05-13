@@ -414,14 +414,13 @@ The meaning of each field in Metadata is as follows:
 📚 If you use CompSpoof V2 in your research, please cite the corresponding paper:
 
 ```
-@dataset{zhang2025esdd2compspoofv2,
-  title     = {ESDD2-CompSpoof-V2: A Composite Spoofing Dataset for Speech Anti-Spoofing},
-  author    = {Zhang, Xueping and Li, Ming},
-  year      = {2025},
-  publisher = {Hugging Face},
-  url       = {https://huggingface.co/datasets/XuepingZhang/ESDD2-CompSpoof-V2}
+@INPROCEEDINGS{11152240,
+  author={Zhang, Xueping and Yin, Han and Xiao, Yang and Zhang, Lin and Dang, Ting, Das, Rohan Kumar and Li, Ming},
+  booktitle={2026 IEEE International Conference on Multimedia and Expo Workshops (ICMEW)}, 
+  title={ESDD2: Environment-Aware Speech and Sound Deepfake Detection-Task, Data, Baseline, and Results}, 
+  year={2026},
+  pages={1-5},
 }
-
 ```
 
 
