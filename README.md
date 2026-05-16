@@ -420,7 +420,7 @@ The meaning of each field in Metadata is as follows:
 @INPROCEEDINGS{11152240,
   author={Zhang, Xueping and Yin, Han and Xiao, Yang and Zhang, Lin and Dang, Ting, Das, Rohan Kumar and Li, Ming},
   booktitle={2026 IEEE International Conference on Multimedia and Expo Workshops (ICMEW)}, 
-  title={ESDD2: Environment-Aware Speech and Sound Deepfake Detection-Task, Data, Baseline, and Results}, 
+  title={Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge}, 
   year={2026},
   pages={1-5},
 }
