@@ -252,6 +252,7 @@ CompSpoof
 │   ├── audio                       # audio files
 │   └── metadata                    # metadata of eval set, which only has file name
 │       └── eval.csv
+├──eval_label.csv                   # metadata of eval set, including file name and category
 │
 ├── eval_source                     # eval set data，including audio source
 │   ├── env_sources                 # environmental sound audio used as the environmental sound component in the mixture
@@ -265,6 +266,7 @@ CompSpoof
 │   ├── audio                       # audio files
 │   └── metadata                    # metadata of test set, which only has file name
 │       └── test.csv
+├──test_label.csv                   # metadata of test set, including file name and category
 │
 └── test_source                     # test set audio data，including audio source
     ├── env_sources                 # environmental sound audio used as the environmental sound component in the mixture
