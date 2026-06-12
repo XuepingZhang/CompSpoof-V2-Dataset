@@ -238,7 +238,7 @@ The key differences between CompSpoof and CompSpoof V2 are summarized below.
 The dataset follows a hierarchical directory structure organized by data split:
 
 ```text
-CompSpoof
+CompSpoofV2
 ├── development                     # training and val data，including audio source
 │   ├── env_source                  # environmental sound audio used as the environmental sound component in the mixture
 │   ├── metadata                    # metadata of development set
