@@ -419,12 +419,14 @@ The meaning of each field in Metadata is as follows:
 📚 If you use CompSpoof V2 in your research, please cite the corresponding paper:
 
 ```
-@INPROCEEDINGS{11152240,
-  author={Zhang, Xueping and Yin, Han and Xiao, Yang and Zhang, Lin and Dang, Ting, Das, Rohan Kumar and Li, Ming},
-  booktitle={2026 IEEE International Conference on Multimedia and Expo Workshops (ICMEW)}, 
-  title={Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge}, 
-  year={2026},
-  pages={1-5},
+@misc{zhang2026overviewesdd2environmentawarespeech,
+      title={Overview of ESDD2: Environment-Aware Speech and Sound Deepfake Detection Challenge}, 
+      author={Xueping Zhang and Han Yin and Yang Xiao and Lin Zhang and Ting Dang and Rohan Kumar Das and Ming Li},
+      year={2026},
+      eprint={2606.10791},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2606.10791}, 
 }
 ```
 
