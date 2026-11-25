@@ -453,6 +453,6 @@ The part of this dataset is a derived dataset constructed by combining and mixin
 ## 11. Contact Information
 
 For questions, issues, or collaboration inquiries, please contact:
-* ✉️ Email: [xueping.zhang@dukekunshan.edu.cn](xueping.zhang@dukekunshan.edu.cn)
+* ✉️ Email: [xueping.zhang@eurecom.fr](xueping.zhang@eurecom.fr)
 
 
